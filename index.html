@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El ciclo de vida del desarrollo móvil | MobileStack</title>
+<meta name="description" content="Las siete etapas que convierten una idea en una aplicación móvil: investigación, diseño, arquitectura, pruebas, publicación y mantenimiento, explicadas con ejemplos reales.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Mobile<span>Stack</span></a>
+    <span class="nav-tag">Análisis de Sistemas II</span>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <h1>El ciclo de vida del desarrollo móvil: cómo nace, crece y evoluciona una aplicación</h1>
+    <p class="lede">Cada aplicación que abrimos a diario —desde una red social hasta una app bancaria— pasó por un proceso estructurado antes de llegar a nuestra pantalla. Este artículo recorre las siete etapas de ese proceso, con las decisiones de diseño y arquitectura reales que las sostienen.</p>
+    <div class="rule"></div>
+  </div>
+</header>
+
+<section class="course-card">
+  <dl>
+    <div><dt>Universidad</dt><dd>Universidad Mariano Gálvez de Guatemala</dd></div>
+    <div><dt>Curso</dt><dd>Análisis de Sistemas II</dd></div>
+    <div><dt>Catedrático</dt><dd>Ing. Carlos Augusto Godínez Guzmán</dd></div>
+    <div><dt>Estudiante</dt><dd>Carlos Fernando Muñoz Camel</dd></div>
+    <div><dt>Fecha</dt><dd>13 de septiembre de 2026</dd></div>
+  </dl>
+</section>
+
+<article>
+  <p>Cuando alguien tiene la idea de crear una aplicación móvil, esa idea no se convierte en código de inmediato. Antes pasa por un recorrido con nombre propio: el <strong>ciclo de vida del desarrollo móvil</strong>. Es, en esencia, el mismo concepto que el ciclo de vida del desarrollo de software tradicional, pero adaptado a las particularidades de los dispositivos móviles: pantallas pequeñas, batería limitada, conexión que va y viene, y un usuario que interactúa con el dedo, no con un mouse.</p>
+  <p>Entender este ciclo no es solo un ejercicio académico. Ayuda a ver una app terminada —como Spotify o WhatsApp— no como un producto que "ya estaba ahí", sino como el resultado de decisiones concretas tomadas en cada etapa: qué problema resolver, cómo se ve la interfaz, qué arquitectura sostiene el código, y cómo se mantiene viva la aplicación después de publicarse.</p>
+</article>
+
+<section class="roadmap">
+  <h2 class="roadmap-title">Las 7 etapas del ciclo</h2>
+  <div class="roadmap-grid">
+    <div class="roadmap-item"><span class="num">01</span><span class="name">Idea y definición del problema</span></div>
+    <div class="roadmap-item"><span class="num">02</span><span class="name">Investigación y planificación</span></div>
+    <div class="roadmap-item"><span class="num">03</span><span class="name">Diseño para la movilidad</span></div>
+    <div class="roadmap-item"><span class="num">04</span><span class="name">Arquitectura y desarrollo</span></div>
+    <div class="roadmap-item"><span class="num">05</span><span class="name">Pruebas</span></div>
+    <div class="roadmap-item"><span class="num">06</span><span class="name">Publicación</span></div>
+    <div class="roadmap-item"><span class="num">07</span><span class="name">Mantenimiento y evolución</span></div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-num">01</span>
+    <h3>Idea y definición del problema</h3>
+  </div>
+  <div class="body">
+    <p>Todo comienza por delimitar un problema concreto, no por hacer una lista de funciones deseables. Las apps que se intentan hacer "de todo un poco" suelen perder foco y recursos antes de llegar a producción.</p>
+    <ul class="keylist">
+      <li><strong>Un planteamiento claro del problema</strong> que la app va a resolver, en una sola frase.</li>
+      <li><strong>Una idea general de alcance:</strong> ¿la aplicación necesita ser nativa, multiplataforma o basta con una versión web progresiva?</li>
+      <li><strong>Objetivos y tiempos estimados</strong> del proyecto, aunque sean aproximados en esta etapa.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-num">02</span>
+    <h3>Investigación de mercado y planificación</h3>
+  </div>
+  <div class="body">
+    <p>Antes de diseñar una sola pantalla, conviene confirmar que la idea tiene sentido en el mercado actual. Esta etapa responde una pregunta incómoda pero necesaria: ¿alguien más ya resolvió esto, y qué le falta a esa solución?</p>
+    <ul class="keylist">
+      <li><strong>Análisis de la competencia:</strong> qué aplicaciones similares existen y cuáles son sus puntos débiles.</li>
+      <li><strong>Definición de usuarios (personas):</strong> quién va a usar la app y en qué contexto —caminando, con una mano, con poca señal—.</li>
+      <li><strong>Selección temprana de la pila tecnológica</strong> y evaluación de riesgos técnicos.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-num">03</span>
+    <h3>Diseño para la movilidad</h3>
+  </div>
+  <div class="body">
+    <p>Diseñar para un teléfono no es encoger un diseño de escritorio. Un dispositivo móvil impone reglas propias: se usa con los dedos, se queda sin batería, pierde la señal y cambia de contexto todo el tiempo —caminando, en el carro, con poca luz—. El diseño tiene que asumir esas limitaciones desde el primer boceto.</p>
+    <ul class="keylist">
+      <li><strong>Prioridad táctil (touch-first):</strong> zonas de toque de al menos 48x48 píxeles y gestos naturales como deslizar o pellizcar, pensados para el alcance del pulgar.</li>
+      <li><strong>Diseño consciente del contexto:</strong> la interfaz puede adaptarse en tiempo real usando GPS, acelerómetro o sensor de luz.</li>
+      <li><strong>Enfoque offline-first:</strong> la app guarda información localmente y sincroniza después, en lugar de depender de que la conexión nunca falle.</li>
+      <li><strong>Prototipado:</strong> herramientas como Figma, Sketch o Penpot permiten validar el diseño antes de escribir una sola línea de código.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-num">04</span>
+    <h3>Arquitectura y desarrollo</h3>
+  </div>
+  <div class="body">
+    <p>Esta suele ser la etapa más larga del ciclo. Aquí se decide la <strong>arquitectura</strong> de la aplicación: el conjunto de reglas que define cómo se conectan la interfaz, la lógica de negocio y los datos. Una buena arquitectura no se nota cuando todo funciona bien; se nota cuando hay que agregar una función nueva sin romper las que ya existían.</p>
+
+    <div class="table-wrap">
+      <table class="compare">
+        <thead>
+          <tr><th>Enfoque</th><th>Tecnologías típicas</th><th>Cuándo se usa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nativa</td><td>Swift (iOS), Kotlin (Android)</td><td>Apps que exigen máximo rendimiento y acceso directo al hardware: bancos, juegos, apps con biometría.</td></tr>
+          <tr><td>Multiplataforma</td><td>Flutter, React Native</td><td>Apps que necesitan lanzarse rápido en iOS y Android compartiendo la mayoría del código: e-commerce, delivery.</td></tr>
+          <tr><td>PWA (web progresiva)</td><td>HTML, CSS, JavaScript + Service Workers</td><td>Sitios que se instalan como app, funcionan sin conexión y envían notificaciones sin pasar por una tienda de aplicaciones.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>A nivel de código, casi todas las arquitecturas móviles separan la app en capas —presentación, lógica de negocio y datos— para que un equipo pueda trabajar en la pantalla mientras otro ajusta la conexión con el servidor sin pisarse el trabajo. Los patrones más usados para organizar esa separación son <strong>MVVM</strong> (estándar en Android), <strong>VIPER</strong> o Clean Architecture (común en apps iOS complejas) y <strong>MVI</strong>, basado en flujo de datos en una sola dirección.</p>
+
+    <div class="callout">
+      <h4>Así se ve en apps reales</h4>
+      <ul>
+        <li><strong>Spotify</strong> usa una arquitectura modular: la reproducción, la búsqueda y el perfil son módulos independientes que distintos equipos mantienen por separado. Además, el propio servidor decide qué carruseles de música muestra (Server-Driven UI), lo que le permite cambiar el diseño para eventos como Spotify Wrapped sin pedirte que actualices la app.</li>
+        <li><strong>WhatsApp</strong> es un ejemplo clásico de offline-first: guarda tus mensajes en la base de datos local del teléfono antes de intentar enviarlos, así que puedes redactar un mensaje sin señal y se enviará solo cuando la recuperes.</li>
+        <li><strong>Uber</strong> usa un marco propio (RIBs) para manejar varios estados a la vez —ubicación del conductor, ruta en el mapa, cobro— sin que la interfaz se congele.</li>
+      </ul>
+    </div>
+
+    <p>Un ejemplo simple ayuda a ver esta arquitectura en acción: pensemos en la compra de un libro dentro de una tienda en línea.</p>
+
+    <div class="diagram">
+      <div class="box">
+        <h5>Cliente móvil</h5>
+        <div class="row"><strong>Interfaz de la app</strong>Selección de productos y carrito</div>
+        <div class="row"><strong>Caché local</strong>Guarda catálogo y carrito aunque no haya señal</div>
+        <div class="row"><strong>Cola de sincronización</strong>Guarda el pedido hasta que vuelva la conexión</div>
+      </div>
+      <div class="box">
+        <h5>Servidor de la tienda</h5>
+        <div class="row"><strong>Servicio web (API)</strong>Gestiona pedidos y sesión</div>
+        <div class="row"><strong>Catálogo (base de datos)</strong>Inventario y precios</div>
+        <div class="row"><strong>Pasarela de pago</strong>Autoriza el cobro</div>
+      </div>
+    </div>
+    <p>Si la conexión falla justo cuando el usuario agrega el libro al carrito, la app no se detiene: guarda la acción localmente y la envía al servidor apenas la señal regresa. Esa es, en la práctica, la diferencia entre una app frágil y una app confiable.</p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-num">05</span>
+    <h3>Pruebas</h3>
+  </div>
+  <div class="body">
+    <p>Antes de que la aplicación llegue a manos del usuario, tiene que sobrevivir a un examen exhaustivo. No es un paso opcional: es más barato encontrar un error ahora que después de que miles de personas lo descarguen.</p>
+    <ul class="keylist">
+      <li><strong>Pruebas funcionales:</strong> confirman que cada función hace lo que se supone que debe hacer.</li>
+      <li><strong>Pruebas de rendimiento:</strong> miden consumo de batería, memoria y velocidad de respuesta.</li>
+      <li><strong>Pruebas de seguridad:</strong> verifican que los datos del usuario viajan cifrados y que no hay accesos no autorizados.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-num">06</span>
+    <h3>Publicación</h3>
+  </div>
+  <div class="body">
+    <p>La app pasa por el proceso de revisión de la tienda correspondiente —Google Play o App Store— antes de estar disponible al público. Cada tienda tiene sus propias reglas de aprobación, tiempos de revisión y requisitos técnicos, así que esta etapa suele incluir ajustes de última hora antes del lanzamiento oficial.</p>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="phase">
+  <div class="phase-head">
+    <span class="phase-num">07</span>
+    <h3>Mantenimiento y evolución</h3>
+  </div>
+  <div class="body">
+    <p>El ciclo no termina cuando la app se publica; ahí empieza otra fase, tan larga como las anteriores. Hay que corregir errores que solo aparecen con uso real, lanzar actualizaciones, y monitorear cómo se comporta la app en distintos dispositivos. Con el tiempo, algunas funciones se retiran y otras se rediseñan por completo.</p>
+    <p>Esta etapa también es donde entran las tendencias que están definiendo el futuro del desarrollo móvil:</p>
+    <ul class="keylist">
+      <li><strong>IA en el dispositivo:</strong> modelos que corren localmente en el teléfono, sin depender de un servidor, lo que reduce la latencia y protege la privacidad.</li>
+      <li><strong>Pantallas plegables</strong> que exigen que la interfaz se adapte de forma fluida entre distintos tamaños y posturas.</li>
+      <li><strong>Realidad aumentada y computación espacial</strong>, que superponen información digital sobre el mundo físico.</li>
+      <li><strong>Interfaces por voz (Zero UI):</strong> interacciones mediante lenguaje natural que ya no dependen de tocar una pantalla.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="closing">
+  <h2 class="big">Un ciclo, no una línea recta</h2>
+  <p>Aunque se presente como una lista de pasos, el ciclo de vida del desarrollo móvil rara vez es una línea recta. Los equipos vuelven sobre el diseño después de las pruebas, ajustan la arquitectura cuando aparece una nueva necesidad, y el mantenimiento termina alimentando la idea de la siguiente versión. Ver la aplicación como un sistema que se diseña para cualquier contexto —con poca señal, con poca batería, en movimiento— es, al final, lo que separa una app que la gente abandona de una que usa todos los días.</p>
+  <div class="chips">
+    <span class="chip">Offline-first</span>
+    <span class="chip">Touch-first</span>
+    <span class="chip">Arquitectura en capas</span>
+    <span class="chip">Escalable</span>
+    <span class="chip">Segura</span>
+  </div>
+</section>
+
+<section class="refs">
+  <h2>Referencias (APA)</h2>
+  <ol>
+    <li>AppMaster. (2020, 21 de marzo). <em>Ciclo de vida de la aplicación</em>. AppMaster. <a href="https://appmaster.io/es/glossary/ciclo-de-vida-de-la-aplicacion">https://appmaster.io/es/glossary/ciclo-de-vida-de-la-aplicacion</a></li>
+    <li>Couchbase. (2025, 17 de enero). <em>Proceso de desarrollo de aplicaciones móviles (ciclo de vida)</em>. Couchbase Blog. <a href="https://www.couchbase.com/blog/es/mobile-app-development-process/">https://www.couchbase.com/blog/es/mobile-app-development-process/</a></li>
+    <li>Juice Studio. (2024, 16 de julio). <em>Descifrar las 7 diferentes etapas del ciclo de desarrollo de aplicaciones móviles</em>. <a href="https://juice-studio.com/descifrar-las-7-diferentes-etapas-del-ciclo-de-desarrollo-de-aplicaciones-moviles/">https://juice-studio.com/descifrar-las-7-diferentes-etapas-del-ciclo-de-desarrollo-de-aplicaciones-moviles/</a></li>
+    <li>Microsoft. (2023, 13 de julio). <em>Ciclo de vida de desarrollo de software móvil</em>. Microsoft Learn. <a href="https://learn.microsoft.com/es-es/xamarin/cross-platform/get-started/introduction-to-mobile-sdlc">https://learn.microsoft.com/es-es/xamarin/cross-platform/get-started/introduction-to-mobile-sdlc</a></li>
+    <li>Mobian Studio. (2024, 24 de octubre). <em>Ciclo de vida integral del desarrollo de aplicaciones móviles: desde el concepto hasta la implementación</em>. <a href="https://mobian.studio/es/understanding-mobile-app-development-lifecycle/">https://mobian.studio/es/understanding-mobile-app-development-lifecycle/</a></li>
+    <li>Universidad Mariano Gálvez de Guatemala, curso Análisis de Sistemas II. (2026). <em>Arquitectura de aplicaciones móviles</em> [Material de clase].</li>
+    <li>Universidad Mariano Gálvez de Guatemala, curso Análisis de Sistemas II. (2026). <em>Diseño para la movilidad</em> [Material de clase].</li>
+  </ol>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Blog académico</span>
+    <span>Carlos Fernando Muñoz Camel · Análisis de Sistemas II</span>
+  </div>
+</footer>
+
+</body>
+</html>
